@@ -36,8 +36,12 @@ def inject_adsense_head():
     )
 
 def inject_pwa_support():
-    """注入 PWA 支援"""
+    """注入 PWA 支援和 Google AdSense 驗證"""
     pwa_html = """
+    <!-- Google AdSense 驗證標記 -->
+    <meta name="google-adsense-account" content="ca-pub-4585150092118682">
+    
+    <!-- PWA Meta Tags -->
     <link rel="manifest" href="/app/static/manifest.json">
     <meta name="theme-color" content="#FF4B4B">
     <meta name="apple-mobile-web-app-capable" content="yes">
