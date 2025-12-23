@@ -6,13 +6,15 @@ numpy>=1.24.0,<2.0.0
 # Visualization
 plotly>=5.17.0,<6.0.0
 
-# HTTP Requests
+# HTTP Requests (Critical: 鎖定版本避免 proxies 錯誤)
 requests>=2.31.0,<3.0.0
 urllib3>=2.0.0,<3.0.0
+httpx>=0.24.0,<0.25.0
+httpcore>=0.17.0,<0.18.0
 
 # AI APIs
 google-generativeai>=0.3.0,<1.0.0
-openai>=1.0.0,<1.50.0
+openai>=1.0.0,<1.10.0
 
 # Scientific Computing
 scipy>=1.11.0,<2.0.0
@@ -21,26 +23,3 @@ scipy>=1.11.0,<2.0.0
 lxml>=4.9.0,<6.0.0
 html5lib>=1.1
 beautifulsoup4>=4.12.0,<5.0.0
-```
-
-4. **提交變更**
-   - 往下捲動
-   - 點擊綠色的 "Commit changes" 按鈕
-
-5. **等待 Railway 重新部署**
-   - 回到 Railway Dashboard
-   - 會自動偵測到變更並重新部署
-   - 等待 2-3 分鐘
-
----
-
-## 🔍 驗證修復
-
-部署完成後：
-
-### ✅ 檢查 1: Deploy Logs
-- Railway → Deployments → 最新部署 → View Logs
-- 應該看到：
-```
-  ✅ Successfully installed streamlit pandas plotly...
-  ✅ You can now view your Streamlit app
